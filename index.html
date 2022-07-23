@@ -1,0 +1,48 @@
+<html>
+
+<head>
+    <title>DBMS Project</title>
+    <link rel="stylesheet" href="/styles/index.css">
+    <script src="/styles/index.js"></script>
+</head>
+
+<body>
+    <div class="heading">
+        Data Gathering Using MS Graph for Organizational Network Analysis
+    </div>
+    <div class="choice">
+        <div class="drop-down-menu" onchange="make_disable()">
+            <select class="drop-down-selection">
+                <option value="SELECT">SELECT</option>
+                <option value="EVENTS">CALENDAR EVENTS</option>
+                <option value="CHATS">CHATS</option>
+                <option value="CONVERSATION">CONVERSATIONS</option>
+                <option value="EMAILS">EMAILS</option>
+                <option value="TODOLISTS">TO DO LISTS</option>
+                <option value="USERS">USERS</option>
+            </select>
+        </div>
+    </div>
+    <div class="temp">
+        <div class="choice2">
+            <div class="limit">
+                <h3>Start Date:- &nbsp;&nbsp;</h3>
+                <input type="text" id="start-date" placeholder="YYYY-MM-DD" disabled="true">
+            </div>
+            <div class="limit">
+                <h3>End Date&nbsp;:- &nbsp;</h3>
+                <input type="text" id="end-date" placeholder="YYYY-MM-DD" disabled="true">
+            </div>
+        </div>
+    </div>
+    <div class="texts">
+    <textarea name="text" id="query" cols="60" rows="10" placeholder="Enter SQL query for complex operations"></textarea>
+</div>
+    <div>
+        <button onclick="filldata()">GET RESULT</button>
+    </div>
+
+    <div id="result" style="overflow-x: auto;"></div>
+</body>
+
+</html>
